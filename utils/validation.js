@@ -1,12 +1,12 @@
 const joi = require("joi")
 
-const signupVal = ( ) => {
+const signupVal = (data) => {
     const schema = joi.object({
         first_name: joi.string().required(),
         last_name: joi.string().required(),
         email: joi.string().required(),
     })
-    schema.validate()
+    schema.validate(data)
 }
 
 module.exports = {
